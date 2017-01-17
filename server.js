@@ -22,9 +22,11 @@ app.use((request,response,next) => {
   next();//
 });
 
-app.use((request,response,next) => {
-  response.render('maintenance.hbs');
-});
+// If you want to take site down for maintenance
+// add a middleware
+// app.use((request,response,next) => {
+//   response.render('maintenance.hbs');
+// });
 
 app.use(express.static(__dirname + '/public'));
 
